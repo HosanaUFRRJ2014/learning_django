@@ -1,7 +1,16 @@
 <h1>{{ question }}</h1>
 
-<ul>
+{% if error_message %}
+  <!-- mixing css with html is not a good ideia, but I didn't want to separate it.
+  Don't worry, there's not too much of it -->
+  <p><strong style="color:red;">{{ error_message }}</strong></p>
+{%  endif %}
+
+<form action="{% url 'polls:vote' question.id %}" method="post">
+  {% csrf_token %} <!-- Avoids Cross Site Request Forgeries attacks -->
   {% for choice in question.choice_set.all %}
-    <li>{{choice.choice_text}}</li>
+    <input type="radio" name="choice" id="choice{{ forloop.counter }}" value="{{ choice.id }}"/>
+    <label for="choice{{ forloop.counter }}">{{ choice.choice_text }}</label><br>
   {% endfor %}
-</ul>
+  <input type="submit" value="Vote">
+</form>
