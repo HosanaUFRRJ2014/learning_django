@@ -1,2 +1,14 @@
-<h1>You're voting at question:</h1>
-<h2>{{question}}</h2>
+<html>
+  <head>
+    <title>Vote</title>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'polls/style.css' %}" />
+  </head>
+
+  <body>
+    <div class="div1">
+      <h1 class="page_title">You're voting at question:</h1>
+      <h2>{{question}}</h2>
+    </div>
+  </body>
+</html>

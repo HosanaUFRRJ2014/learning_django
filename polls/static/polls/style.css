@@ -1,0 +1,81 @@
+
+/*HTML elements*/
+a {
+  text-decoration:  none;
+}
+
+body {
+  background: white url("images/background.png") no-repeat;
+  background-size: 100% 100%;
+}
+
+li a {
+  color: blue;
+}
+
+li a:hover {
+  color: rgba(15, 15, 97, 1); /*some sort of blue*/
+}
+
+
+/*Classes*/
+
+.button {
+  color: white;
+  align-self: center;
+  border-radius: 5px;
+  border-color: rgba(0, 0, 100, 1); /*some sort of blue*/
+  background-color: rgba(15, 15, 97, 1); /*some sort of blue*/
+  padding: 10px;
+  padding-top: 10px;
+  margin-top: 15px;
+}
+
+
+.button:hover {
+  background-color: blue;
+}
+
+.div1 {
+  border-radius: 5px;
+  display: inline-block;
+  vertical-align: top;
+  background: white;
+  text-align: left;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  width: 500px;
+  height: auto;
+  margin: auto;
+  display: block;
+  position: relative;
+}
+
+/*.div2 {
+  display: inline-block;
+  float: left;
+  position: absolute;
+  /*width: 10px;
+}*/
+
+.div-button-pos-left {
+  /*float: left;*/
+}
+
+.div-button-pos-right {
+  position: absolute;
+  right: 25px;
+  bottom: 19px;
+
+}
+
+.error_message {
+  padding-top: 5px;
+  padding-left: 5px;
+  color: red;
+  font-weight: bold;
+}
+
+.page_title {
+  text-align: center;
+}
