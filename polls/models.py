@@ -17,6 +17,12 @@ class Question(models.Model):
         return now >= self.pub_date >= now - datetime.timedelta(days=1)
 
 
+    #admin's settings
+    was_published_recently.admin_order_field = 'pub_date'
+    was_published_recently.boolean = True
+    was_published_recently.short_description = 'Publiched recently?'
+
+
 class Choice(models.Model):
 
     question = models.ForeignKey(Question, on_delete=models.CASCADE)
